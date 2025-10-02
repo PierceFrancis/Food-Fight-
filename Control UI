@@ -1,0 +1,17 @@
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	#text of the label should be the number we have in game manager
+	if GameManager.pickups_p1 > 0:
+		$Label.text = "Player 1: Holding food"
+	else:
+		$Label.text = "Player 1: Not holding food"
+		
+	if GameManager.pickups_p2 > 0:
+		$Label2.text = "Player 2: Holding food"
+	else:
+		$Label2.text = "Player 2: Not holding food"
