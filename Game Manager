@@ -1,0 +1,14 @@
+extends Node
+
+var pickups_p1: int = 0
+var pickups_p2: int = 0
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass
+
+func add_pickup(player_id: int) -> void:
+	if player_id == 1:
+		pickups_p1 += 1
+	elif player_id == 2:
+		pickups_p2 += 1
